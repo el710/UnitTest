@@ -1,5 +1,5 @@
 import unittest
-import testing
+import test_theme
 import add_utest
 
 """
@@ -10,10 +10,10 @@ calc_test_suite = unittest.TestSuite()
 """
 add tests from TestCase class...
 """
-# calc_test_suite.addSubTest(unittest.makeSuite(testing.CalcTest)) ## old fasion call
-calc_test_suite.addTest(unittest.TestLoader().loadTestsFromTestCase(testing.CalcTest))
+# calc_test_suite.addSubTest(unittest.makeSuite(test_theme.CalcTest)) ## old fasion call
+calc_test_suite.addTest(unittest.TestLoader().loadTestsFromTestCase(test_theme.CalcTest))
 
-## add from other test file - u_test.py
+## add from other test file - add_utest.py
 calc_test_suite.addTest(unittest.TestLoader().loadTestsFromTestCase(add_utest.NewTest))
 
 """
